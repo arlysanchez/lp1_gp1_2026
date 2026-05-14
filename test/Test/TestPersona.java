@@ -22,14 +22,14 @@ public class TestPersona {
 
     public static void main(String[] args) {
         TestPersona t = new TestPersona();
-       // t.crear_usuario();
+      //  t.crear_usuario();
        t.validate();
     }
 
     public void crear_usuario() {
         Persona p = new Persona();
         p.setNombre("Jhan Arly");
-        p.setEmail("jhan@gmail.com");
+        p.setEmail("jhan1@gmail.com");
         p.setDireccion("upeu");
         p.setTelefono("987654321");
         Usuario u = new Usuario();
