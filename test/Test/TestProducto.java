@@ -20,6 +20,7 @@ public class TestProducto {
     public static void main(String[] args) {
           TestProducto t = new TestProducto();
           t.listar();
+          //t.insertar();
     }
 
     public static void listar() {
@@ -35,5 +36,24 @@ public class TestProducto {
         } else {
             System.out.println("no hay data");
         }
+    }
+    
+    public static void insertar(){
+        Producto p = new Producto();
+        
+        p.setNombre("Papas");
+        p.setDescripcion("Huayro");
+        p.setPrecio(2);
+        p.setStock(50);
+        p.setImagen("/resources/img/papa.jpg");
+        
+        boolean result = dao.insertar(p);
+        
+        if (result) {
+            System.out.println("Datos correctos");
+        }else{
+            System.out.println("DatosIncorrectos");
+        }
+        
     }
 }
