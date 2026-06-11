@@ -29,7 +29,7 @@ public class ProductoDaoImpl implements IProducto {
 
         try {
             query = " SELECT id_producto,nombre,descripcion,precio,"
-                    + " stock FROM productos; ";
+                    + " stock, imagen FROM productos; ";
             lista = new ArrayList<>();
             cn = ConexionSingleton.getConnection();
             st = cn.prepareStatement(query);
@@ -41,6 +41,7 @@ public class ProductoDaoImpl implements IProducto {
                 pr.setDescripcion(rs.getString("descripcion"));
                 pr.setPrecio(rs.getDouble("precio"));
                 pr.setStock(rs.getInt("stock"));
+                pr.setImagen(rs.getString("imagen"));
                 lista.add(pr);
             }
 
