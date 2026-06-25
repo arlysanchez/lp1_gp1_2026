@@ -109,7 +109,7 @@ public class AuthController extends HttpServlet {
 
                 int resultado = pDao.insertar(p, u);
 
-                jsonResponse.addProperty("sucess", resultado !=0);
+                jsonResponse.addProperty("success", resultado !=0);
                 jsonResponse.addProperty("message",resultado !=0 ? "Registro Sucess":"Error de registro");
                 out.print(jsonResponse.toString());
 
@@ -117,7 +117,7 @@ public class AuthController extends HttpServlet {
 
         } catch (Exception e) {
             response.setStatus(500);
-            jsonResponse.addProperty("sucess", false);
+            jsonResponse.addProperty("success", false);
             jsonResponse.addProperty("message", "Error" + e.getMessage());
             response.getWriter().print(jsonResponse.toString());
 

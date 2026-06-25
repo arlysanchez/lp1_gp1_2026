@@ -14,4 +14,6 @@ public interface IPedido {
     
     public int generarPedido(Pedido pedidos);
     
+    
+    
 }
